@@ -8,4 +8,9 @@ class ExamSubmission:
     def __str__(self):
         return f'ExamSubmission (examinee: {self.examinee}, points: {self.points})'
 
-# # WRITE YOUR SOLUTION HERE:
+def passed(submissions: list, lowest_passing: int):
+    passed_submissions = []
+    for submission in submissions:
+        if (submission.points >= lowest_passing):
+            passed_submissions.append(submission)
+    return passed_submissions
