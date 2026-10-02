@@ -15,3 +15,9 @@ class GameWarehouse:
     def list_games(self):
         return self.__games
 
+class GameMuseum(GameWarehouse):
+    def __init__(self):
+        super().__init__()
+
+    def list_games(self):
+        return filter(lambda g: g.year < 1990, super().list_games())
