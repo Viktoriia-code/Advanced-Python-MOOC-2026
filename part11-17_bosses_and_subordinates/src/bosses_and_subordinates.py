@@ -6,3 +6,11 @@ class Employee:
 
     def add_subordinate(self, employee: 'Employee'):
         self.subordinates.append(employee)
+
+def count_subordinates(employee: Employee):
+    count = len(employee.subordinates)
+
+    for subordinate in employee.subordinates:
+        count += count_subordinates(subordinate)
+
+    return count

@@ -1,4 +1,3 @@
-# WRITE YOUR SOLUTION HERE:
 class ShoppingList:
     def __init__(self):
         self.products = []
@@ -20,3 +19,6 @@ class ShoppingList:
             return product
         else:
             raise StopIteration
+
+def products_in_shopping_list(shopping_list, amount: int):
+    return [product[0] for product in shopping_list if product[1] >= amount]
